@@ -2,4 +2,26 @@ spring:
   application:
     name: cityHall
 
+datasource:
+  my-config:
+    jdbcUrl: jdbc:mysql://localhost:3306/mobileApp
+    username: root
+    password: Shushed-1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 60000
+      connection-timeout: 60000
+      max-lifetime: 1800000
+      pool-name: MyHikariPool
+      connection-test-query: SELECT 1
+      auto-commit: false
+      validation-timeout: 3000
 
+
+
+security:
+  jwt:
+    expiration-minutes: 30
+    secret-key:
